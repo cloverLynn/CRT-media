@@ -2,13 +2,13 @@ package main
 
 import (
 	"github.com/nexidian/gocliselect"
-	"io/ioutil"
 	"log"
+	"os"
 	"os/exec"
 )
 
 func main() {
-	files, err := ioutil.ReadDir("videos")
+	files, err := os.ReadDir("videos")
 	menu := gocliselect.NewMenu("Pick A File")
 	if err != nil {
 		log.Fatal(err)
